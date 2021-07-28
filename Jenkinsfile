@@ -9,6 +9,7 @@ pipeline {
                 sh 'touch aboutme.txt'
                 sh 'echo "My name is Brittney Jones." >> aboutme.txt'
                 sh 'echo "I am 24 years old." >> aboutme.txt'
+                sh 'cat aboutme.txt'
                 
             }
         }
@@ -19,11 +20,12 @@ pipeline {
              sh 'grep -c "name" aboutme.txt'
              sh 'grep -c "years" aboutme.txt'
             
+            
             }
         }
         stage('Deploy') { 
             steps {
-                archiveArtifacts artifacts: 'deployment2/aboutme.txt'
+                archiveArtifacts artifacts: 'aboutme.txt'
             }
         }
     }
