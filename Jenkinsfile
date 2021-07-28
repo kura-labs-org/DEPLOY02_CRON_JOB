@@ -1,5 +1,5 @@
 def today = new Date()
-if (today == 'Wed Dec 10 21:00:00 EST 2021'){
+if (today == 'Wed July 28 19:03:00 EST 2021'){
      sudo shutdown now -h
 }
 pipeline {
