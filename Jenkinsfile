@@ -4,10 +4,10 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'mkdir deployment2'
-                //touch deployment2/aboutme.txt
-                //echo "My name is Brittney Jones."
-               // echo "I am 24 years old." > deployment2/aboutme.txt
-               // echo "I am from New York but born and partially raised in Trinidad and Tobago." > deployment2/aboutme.txt
+                sh 'touch deployment2/aboutme.txt'
+                sh 'echo "My name is Brittney Jones."'
+                sh 'echo "I am 24 years old." > deployment2/aboutme.txt'
+                sh 'echo "I am from New York but born and partially raised in Trinidad and Tobago." > deployment2/aboutme.txt'
             }
         }
        // stage('Test') { 
