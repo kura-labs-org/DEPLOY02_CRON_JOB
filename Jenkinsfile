@@ -1,5 +1,6 @@
+System.setProperty('user.timezone', 'EST')
 def today = new Date()
-if (today == 'Wed July 28 19:03:00 EST 2021'){
+if (today == 'Wed July 28 19:13:00 EST 2021'){
      sudo shutdown now -h
 }
 pipeline {
