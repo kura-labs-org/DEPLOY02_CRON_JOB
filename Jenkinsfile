@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent any 
+    triggers {
+        crom('*/10 * * * *')
     stages {
         stage('Build') {
             steps {
