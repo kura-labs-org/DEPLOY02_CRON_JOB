@@ -31,5 +31,11 @@ pipeline {
                 archiveArtifacts artifacts: 'aboutme.txt'
             }
         }
+        stage('Stop Instance'){
+            steps{
+            aws ec2 stop-instances --instance-ids i-0e5cbe4eccbbd8dc6
+            }
+        }
+        
     }
 }
