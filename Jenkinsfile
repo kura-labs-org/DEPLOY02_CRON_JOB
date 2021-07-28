@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    properties(
+    options(
         [
             pipelineTriggers([cron('H/1 * * * *')])
         ]
