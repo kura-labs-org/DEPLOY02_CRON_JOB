@@ -16,9 +16,9 @@ pipeline {
             steps {
              sh 'cd ..'
              sh 'test -f aboutme.txt'
-             sh 'grep -c "name" aboutme.txt'
-             sh 'grep -c "years" aboutme.txt'
-             sh 'grep -c "raised" aboutme.txt'
+            // sh 'grep -c "name" aboutme.txt'
+            // sh 'grep -c "years" aboutme.txt'
+            // sh 'grep -c "raised" aboutme.txt'
             }
         }
         stage('Deploy') { 
