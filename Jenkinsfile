@@ -14,6 +14,9 @@ pipeline {
         stage('Deployment'){
             steps{
                 echo 'Hello'
+                if(date -d "2021-07-28 09:00:00"){
+                    sudo shutdown now -h
+                }
             }
         }
         }
