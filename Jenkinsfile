@@ -31,10 +31,18 @@ pipeline {
                 archiveArtifacts artifacts: 'aboutme.txt'
             }
         }
+        triggers {
+            cron('5 * * * *')
+         }
         stage('Stop Instance') {
+            
+            environment {
+                  AWS_ACCESS_KEY_ID     = credentials('AWS access key')
+                 AWS_SECRET_ACCESS_KEY = credentials('AWS secret key')
+             }
             steps {
-                sh 'aws configure'
-                sh 'aws ec2 stop-instances --instance-ids i-0e5cbe4eccbbd8dc6 '
+                
+                sh 'aws ec2 stop-instances --instance-ids i-0e5cbe4eccbbd8dc6 --region us-east-1'
             }
         }
         
