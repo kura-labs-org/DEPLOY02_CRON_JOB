@@ -14,10 +14,11 @@ pipeline {
         }
         stage('Test') { 
             steps {
-             sh 'test -f aboutme.txt'
-             sh 'grep "name" aboutme.txt'
-             sh 'grep "years" aboutme.txt'
-             sh 'grep "raised" aboutme.txt'
+             sh 'cd ..'
+             sh 'test -f deployment2/aboutme.txt'
+             sh 'grep -c "name" aboutme.txt'
+             sh 'grep -c "years" aboutme.txt'
+             sh 'grep -c "raised" aboutme.txt'
             }
         }
         stage('Deploy') { 
