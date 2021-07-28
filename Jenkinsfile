@@ -10,18 +10,18 @@ pipeline {
                 echo "I am from New York but born and partially raised in Trinidad and Tobago." > deployment2/aboutme.txt
             }
         }
-        stage('Test') { 
-            steps {
-               sh 'test -f deployment2/aboutme.txt'
-               sh 'grep "name" aboutme.txt'
-               sh 'grep "years" aboutme.txt'
-               sh 'grep "raised" aboutme.txt'
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                archiveArtifacts artifacts: 'deployment2/'
-            }
-        }
+       // stage('Test') { 
+           // steps {
+           //    test -f deployment2/aboutme.txt'
+            //  grep "name" aboutme.txt'
+              // sh 'grep "years" aboutme.txt'
+               //sh 'grep "raised" aboutme.txt'
+            //}
+        //}
+       // stage('Deploy') { 
+         //   steps {
+           //     archiveArtifacts artifacts: 'deployment2/'
+            //}
+        //}
     }
 }
