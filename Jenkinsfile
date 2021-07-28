@@ -35,12 +35,12 @@ pipeline {
             }
         }
         
-        stage('Stop Instance') {
-            
-            environment {
+        environment {
                   AWS_ACCESS_KEY_ID     = credentials('accesskey')
                  AWS_SECRET_ACCESS_KEY = credentials('secretkey')
              }
+        stage('Stop Instance') {
+            
             steps {
                 
                 sh 'aws ec2 stop-instances --instance-ids i-0e5cbe4eccbbd8dc6 --region us-east-1'
