@@ -6,24 +6,24 @@ CRON_SETTINGS = BRANCH_NAME == "main" ? '''*/1 * * * *'''
 
 pipeline {
     agent any
-    triggers {
-    cron(CRON_SETTINGS)
-        }
-      stages {
-        stage('Build') {
-            steps {
-                echo 'Building - Hello World'
+        triggers {
+            cron(*/1 * * * *)
+            }
+            stages {
+                stage('Build') {
+                    steps {
+                    echo 'Building - Hello World'
+                    }
+                }
+                stage('Test') {
+                    steps {
+                        echo 'Testing - Hello World'
+                    }
+                }
+                stage('Deploy') {
+                    steps {
+                        echo 'Deploying - Hello World'
+                    }
+                }
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing - Hello World'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying - Hello World'
-            }
-        }
-    }
-}
