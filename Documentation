@@ -60,7 +60,9 @@ Jenkins
 -Select repository Scan, in the Owner, type in the username of the github if there is nothing popping up
 -Select DEPLOY02_cron_job
 -Save
-
+-See Jenkinsfile for Code
+-Go to Configure --> Scan Repository Triggers --> Check Periodic --> Set for 10 minutes.
+##This step was done in lieu of a Build Trigger since this Project item does not seem to have a Build Trigger Function Setting. However, if a Build trigger cron job was needed. add to cron: */10 * * * * 
 
 
 Shutting down at end of class
