@@ -1,6 +1,7 @@
 Task:
 Deploy Jenkins on a Linux system to and create a pipeline to include 3 stages (Build, Deploy and Test)
 Following this, the parameters of this job must include a build every 10 minutes.
+Last, a shutdown at the end of class (Tues-Thurs 9PM, Sat 5PM)
 
 Instructions broken down as followed:
 --Set up EC2 Instances
@@ -8,6 +9,7 @@ Instructions broken down as followed:
 --SSH KEYS
 --Git
 --Jenkins
+--Shutting down at the end of class
 
 Set up EC2 Instances
 -Set configurations on EC2 with t.2 micro, default storage, and default on tags.
@@ -68,7 +70,8 @@ timedatectl
 --Adding a cronjob to shutdown
 ##For cronjobs, you invoke the command based on the user that edits the cron. For this job, this must be invoked from the sbin, so a user with superuser group or even the root user itself.
 sudo crontab -e
-00 21 * * * sudo shutdown -h now
+00 21 * * 2-4 sudo shutdown -h now
+00 17 * * 6 sudo shutdown -h now
 ##The super user will invoke the command and therefore add to the cron jobs to shutdown immediately as the command is down at every 9PM. Even though it's a superuser inputting this, the sudo must be placed in because shutdown is a command that belongs to the sbin, so the sytem will know that this is invoked from sbin instead of bin.
 ##Last, You can also have the ec2-user do this without the sudo crontab -e and just crontab -e regular if you add them to the sudo group.
 --Check that the cron has been successfully placed in.
