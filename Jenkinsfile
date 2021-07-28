@@ -3,9 +3,9 @@ pipeline {
     //triggers {
         //cron('*/10 * * * *')
    // }
-    //triggers {
-            //cron('5 * * * *')
-        // }
+    triggers {
+            cron('5 * * * *')
+    }
     stages {
         stage('Build') { 
             steps {
@@ -37,8 +37,8 @@ pipeline {
         
        stage('Stop Instance') {
                 environment {
-                  AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-                 AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+                        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
+                        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
                 }
            steps {
                 sh 'aws ec2 stop-instances --instance-ids i-0e5cbe4eccbbd8dc6 --region us-east-1'
