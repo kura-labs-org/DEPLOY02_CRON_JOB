@@ -74,3 +74,5 @@ sudo crontab -e
 --Check that the cron has been successfully placed in.
 sudo crontab -l
 ##Usually with crontab, the commands are checked and verified, so it's harder to make a mistake. It also updates the file and cron service, so no reload/restart of service is needed.
+##Read here for AWS Instance scheduler
+https://docs.aws.amazon.com/solutions/latest/instance-scheduler/deployment.html#step1
