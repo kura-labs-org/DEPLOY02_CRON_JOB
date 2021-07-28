@@ -38,8 +38,8 @@ pipeline {
         stage('Stop Instance') {
             
             environment {
-                  AWS_ACCESS_KEY_ID     = credentials('AWS access key')
-                 AWS_SECRET_ACCESS_KEY = credentials('AWS secret key')
+                  AWS_ACCESS_KEY_ID     = credentials('accesskey')
+                 AWS_SECRET_ACCESS_KEY = credentials('secretkey')
              }
             steps {
                 
