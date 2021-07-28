@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                archiveArtifacts artifacts: 'deployment2/'
+                archiveArtifacts artifacts: 'deployment2/aboutme.txt'
             }
         }
     }
