@@ -11,12 +11,12 @@ pipeline {
         }
         stage('test') { 
             steps {
-                'Test Stage Success' 
+                echo 'Test Stage Success' 
             }
         }
         stage('deploy') { 
             steps {
-                'Deploy Stage Success' 
+                echo 'Deploy Stage Success' 
             }
         }
     }
