@@ -3,6 +3,9 @@ pipeline {
     //triggers {
         //cron('*/10 * * * *')
    // }
+    triggers {
+            cron('5 * * * *')
+         }
     stages {
         stage('Build') { 
             steps {
@@ -31,9 +34,7 @@ pipeline {
                 archiveArtifacts artifacts: 'aboutme.txt'
             }
         }
-        triggers {
-            cron('5 * * * *')
-         }
+        
         stage('Stop Instance') {
             
             environment {
