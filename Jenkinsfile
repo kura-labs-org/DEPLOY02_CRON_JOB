@@ -1,8 +1,8 @@
 // Build once a day
-CRON_SETTINGS = '''*/10 * * * *'''
+CRON_SETTINGS = '''*/1 * * * *'''
 
 // Multi-branch pipeline. Build once a day from a "master" branch only
-CRON_SETTINGS = BRANCH_NAME == "main" ? '''*/10 * * * *'''
+CRON_SETTINGS = BRANCH_NAME == "main" ? '''*/1 * * * *'''
 
 pipeline {
     agent any
