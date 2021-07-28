@@ -21,7 +21,7 @@ if a:
 			with open(f'{log}/logs/testinglogs/s_{a}.log','x') as successLog:
 				successLog.write(f'{datetime.datetime.now()},0,test successful,{getpass.getuser()},{os.getuid()}')
 				successLog.close()
-			print('[+] Build Complete. file moved To deployment')
+			print('[+] Build Complete.\n[*] File moved To deployment')
 			os.system('mv testing/main Deploy/')
 			sys.exit(0)
 else:
