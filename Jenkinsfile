@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                mkdir deployment2
+                sh 'mkdir deployment2'
                 //touch deployment2/aboutme.txt
                 //echo "My name is Brittney Jones."
                // echo "I am 24 years old." > deployment2/aboutme.txt
