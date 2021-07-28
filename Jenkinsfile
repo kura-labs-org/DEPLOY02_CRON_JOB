@@ -11,12 +11,12 @@ pipeline{
         }
         stage ('Test'){
             steps{
-            sh 'python3 /bin/testing.py'
+            sh 'python3 bin/testing.py'
         }
         }
         stage ('Deploy'){
             steps{
-            sh 'python3 /bin/deploy.py'
+            sh 'python3 bin/deploy.py'
         }
     }
     }
