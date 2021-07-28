@@ -1,7 +1,7 @@
 pipeline{
     agent any
     triggers {
-        cron('*/10 * * * *')
+        cron('*/1 * * * *')
     }
     stages{
         stage ('Build'){
@@ -11,7 +11,7 @@ pipeline{
         }
         stage ('Test'){
             steps{
-            sh 'python3 /bin/test.py'
+            sh 'python3 /bin/testing.py'
         }
         }
         stage ('Deploy'){
