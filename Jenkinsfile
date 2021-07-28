@@ -7,8 +7,7 @@ pipeline {
                 sh 'mkdir deployment2'
                 sh 'cd deployment2'
                 sh 'touch aboutme.txt'
-                sh 'echo "My name is Brittney Jones." > aboutme.txt'
-                sh 'echo "I am 24 years old." > aboutme.txt'
+                sh 'echo "My name is Brittney Jones and I am 24 years old." > aboutme.txt'
                 sh 'cat aboutme.txt'
                 
             }
