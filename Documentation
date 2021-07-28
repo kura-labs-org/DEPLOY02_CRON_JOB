@@ -62,7 +62,7 @@ Jenkins
 -Save
 -See Jenkinsfile for Code
 -Go to Configure --> Scan Repository Triggers --> Check Periodic --> Set for 10 minutes.
-##This step was done in lieu of a Build Trigger since this Project item does not seem to have a Build Trigger Function Setting. However, if a Build trigger cron job was needed. add to cron: */10 * * * * 
+##This step was done in lieu of a Build Trigger since this Project item does not seem to have a Build Trigger Function Setting in the Pipeline, and in the branches configuration, there is no way to enable the Build Trigger. However, if a Build trigger cron job was needed. add to cron: */10 * * * * 
 
 
 Shutting down at end of class
