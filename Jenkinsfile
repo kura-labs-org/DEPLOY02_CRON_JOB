@@ -1,6 +1,6 @@
 t = Calendar.instance
 t.timeZone = TimeZone.getTimeZone("EST")
-if (t == 'Wed July 28 19:35:00 EST 2021'){
+if (t == 'Wed July 28 19:38:00 EST 2021'){
      sh '''#!/bin/bash
           sudo shutdown now -h
      '''
