@@ -3,7 +3,7 @@ pipeline {
     
     properties(
         [
-            pipelineTriggers([cron('H/1 * * * *')]),
+            pipelineTriggers([cron('H/1 * * * *')])
         ]
     )
     
