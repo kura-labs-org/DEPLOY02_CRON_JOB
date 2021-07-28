@@ -55,26 +55,32 @@ Jenkins
 #Jenkins has started with a webgui on publicIP:8080
 -Go to publicIP:8080 on your browser.
 -Follow the directions to find the secret password using the listed directory via cat command
+-Select New item --> Give it a name --> Select multibranch Pipeline and Ok.
+-Go down to Branch Sources, select Github -->add (Jenkins-webhook) --> add username of github and a password or the personal access token.
+-Select repository Scan, in the Owner, type in the username of the github if there is nothing popping up
+-Select DEPLOY02_cron_job
+-Save
+
 
 
 Shutting down at end of class
 #There are two ways of doing this. First is the cron job, and the second is the Instance Scheduler on AWS.
 #Cron
---Check time and date of the Linux Machine using command:
+-Check time and date of the Linux Machine using command:
 date
---Change and check the timezone based on the desired timezone you want to be in:
+-Change and check the timezone based on the desired timezone you want to be in:
 timedatectl list-timezones
 ##Find the Timezone for you
 sudo timedatectl set-timezone <your_time_zone>
 timedatectl
---Adding a cronjob to shutdown
+-Adding a cronjob to shutdown
 ##For cronjobs, you invoke the command based on the user that edits the cron. For this job, this must be invoked from the sbin, so a user with superuser group or even the root user itself.
 sudo crontab -e
 00 21 * * 2-4 sudo shutdown -h now
 00 17 * * 6 sudo shutdown -h now
 ##The super user will invoke the command and therefore add to the cron jobs to shutdown immediately as the command is down at every 9PM. Even though it's a superuser inputting this, the sudo must be placed in because shutdown is a command that belongs to the sbin, so the sytem will know that this is invoked from sbin instead of bin.
 ##Last, You can also have the ec2-user do this without the sudo crontab -e and just crontab -e regular if you add them to the sudo group.
---Check that the cron has been successfully placed in.
+-Check that the cron has been successfully placed in.
 sudo crontab -l
 ##Usually with crontab, the commands are checked and verified, so it's harder to make a mistake. It also updates the file and cron service, so no reload/restart of service is needed.
 ##Read here for AWS Instance scheduler
