@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    properties([pipelineTriggers([cron('H/1* * *')])])
+    options([pipelineTriggers([cron('H/1* * *')])])
     stages {
         stage('build') { 
             steps {
