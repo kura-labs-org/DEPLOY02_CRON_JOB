@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                test -f deployment2/aboutme.txt
+               // test -f deployment2/aboutme.txt
                 grep "name" aboutme.txt
                 grep "years" aboutme.txt
                 grep "raised" aboutme.txt
