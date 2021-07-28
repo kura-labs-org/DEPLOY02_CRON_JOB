@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-             sh 'test -f deployment2/aboutme.txt'
+             sh 'test -f aboutme.txt'
              sh 'grep "name" aboutme.txt'
              sh 'grep "years" aboutme.txt'
              sh 'grep "raised" aboutme.txt'
