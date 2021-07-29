@@ -22,8 +22,7 @@ pipeline {
         stage('shut down') {
             steps {
                 echo 'Shutting down'
-              
-                
+                aws ec2 stop-instances --instance-ids i-0ce7deba789ae8114
             }
         }
     }
