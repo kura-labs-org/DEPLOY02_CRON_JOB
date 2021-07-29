@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-        echo "1st build successful"
+        echo "2nd build successful"
       }
     }
     stage('Test'){
@@ -13,7 +13,7 @@ pipeline{
     }
     stage('Deployment'){
       steps{
-      echo "1st Deployment successful"
+      echo "2nd Deployment successful"
       }
     }
   }
