@@ -14,6 +14,7 @@
 - Click on "main" to view the scheduled builds.
 
 ## Pipeline Groovy Code
+```
 pipeline {
     agent any 
     triggers {
@@ -37,5 +38,6 @@ pipeline {
         }
     }
 }
+```
 
 # Shutting Down the EC2 Instance
