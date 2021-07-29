@@ -72,9 +72,9 @@
   
 ![Screenshot 2021-07-29 134829](https://user-images.githubusercontent.com/60336145/127551845-1b723111-1d97-4a79-89bb-0a4709f31636.png)
 ### 3rd method:
-# Using crontab -e create a new file and set the shutdown now -h command to your desired time ![Screenshot 2021-07-29 152302](https://user-images.githubusercontent.com/60336145/127553366-7c925a15-d28e-4819-ae9a-3e5913ccb36b.png)
-* * * * * shutdown now -h
-![Uploading Screenshot 2021-07-29 152302.png…]()
+# Using crontab -e create a new file and set the shutdown now -h command to your desired time * * * * * shutdown now -h
+![Screenshot 2021-07-29 152302](https://user-images.githubusercontent.com/60336145/127553470-ec06cb9d-1929-4d5e-8bed-9549b4a1da67.png)
+
 
 
 
