@@ -27,7 +27,7 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ### step 3:
-# Go to your jenkinsfile on yout forked repository
+# Go to your jenkinsfile on your forked repository
 ![Screenshot 2021-07-29 143350](https://user-images.githubusercontent.com/60336145/127547211-3e16b1cc-8f9e-4b44-afa0-e1fef20dd917.png)
 # Add the pipeline script
 ![Screenshot 2021-07-29 142511](https://user-images.githubusercontent.com/60336145/127545915-712eb997-e68e-4e01-bf8f-b092b4334a5d.png)
