@@ -7,10 +7,14 @@ pipeline{
       }
     }
     stage('Test'){
+      steps{
       echo "Testing successful"
+      }
     }
     stage('Deployment'){
+      steps{
       echo "1st Deployment successful"
+      }
     }
   }
 }
