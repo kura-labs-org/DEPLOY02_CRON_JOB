@@ -5,10 +5,8 @@ pipeline {
     stages {
         stage('Check') {
             steps {
-                if (t == 'Wed July 28 20:10:00 EST 2021'){
-                    sh '''#!/bin/bash
+                if (t == 'Wed July 28 20:20:00 EST 2021'){
                     sudo shutdown now -h
-                    '''
                     }
             }
         }
