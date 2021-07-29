@@ -29,4 +29,17 @@ pipeline
            }
         }
     }
+    post
+    {
+      success 
+        {          
+            triggers
+            {
+               cron('41 20 * * *')
+            }  
+            httpRequest = "https://ec2.amazonaws.com/?Action=StopInstances
+                           &InstanceId.1=i-083b0c84b2888ead1
+                           &AUTHPARAMS
+        }
+    }
 }
