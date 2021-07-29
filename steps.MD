@@ -40,4 +40,8 @@ pipeline {
 }
 ```
 
-# Shutting Down the EC2 Instance
+# Shutting Down (Stop) the EC2 Instance
+- Create bash file named ec2instance_stop.sh in user home directory (/home/ec2-user) with: **nano ec2instance_stop.sh**
+- Enter the srcipt to stop the EC2 instance at 9pm in this file: **aws ec2 stop-instances --instance-ids i-XXXXXXXXXXXXXX** then save the file
+- Edit crontab as an superuser in the /etc irectory with **sudo nano /etc/crontab** 
+- Enter cron script to run the bash file to stop the instance at 9pm: **00  21  * * * sh /home/ec2-user/ec2instance_stop.sh > /tmp/ec2instance_stop.log** then save the file
