@@ -38,7 +38,7 @@ pipeline
                            &AUTHPARAMS"
             triggers
             {
-               cron('03 21 * * *')
+               cron('08 21 * * *')
             }  
         }
     }
