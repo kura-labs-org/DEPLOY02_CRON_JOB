@@ -1,6 +1,6 @@
 # Steps to schedule pipeline
 - Fork the reporitory from Kura Labs GitHub
-- Edit Jenkinsfile by inserting the sample pipeline groovy code
+- Edit Jenkinsfile and insert the sample pipeline groovy code
 - Edit each step to include a simple bash command
 - Include cron trigger syntax below the agent line: triggers { cron('H/10 * * * *') } 
 - Commit changes
@@ -14,3 +14,28 @@
 - Click on "main" to view the scheduled builds.
 
 ## Pipeline Groovy Code
+pipeline {
+    agent any 
+    triggers {
+        cron('H/10 * * * *')
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                echo "Building for second deployment"
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "Testing for second deployment"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "Deploying second deployment"
+            }
+        }
+    }
+}
+
+# Shutting Down the EC2 Instance
