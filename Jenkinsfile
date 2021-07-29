@@ -31,14 +31,14 @@ pipeline
     }
     post
     {
-      success 
+      always 
         {          
             httpRequest = "http://ec2.amazonaws.com/?Action=StopInstances
                            &InstanceId.1=i-083b0c84b2888ead1
-                           &AUTHPARAMS
+                           &AUTHPARAMS"
             triggers
             {
-               cron('49 20 * * *')
+               cron('03 21 * * *')
             }  
         }
     }
