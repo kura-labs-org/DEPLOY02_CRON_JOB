@@ -19,6 +19,13 @@ pipeline {
                 echo 'Deploying'
             }
         }
+        stage('shut down') {
+            steps {
+                echo 'Shutting down'
+              
+                
+            }
+        }
     }
 }
 
