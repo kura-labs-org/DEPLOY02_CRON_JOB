@@ -21,7 +21,7 @@ pipeline {
         }
         stage('shut down') {
             steps {
-                   sh 'poweroff' 
+                   sh 'sudo poweroff' 
             }
         }
     }
