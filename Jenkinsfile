@@ -3,6 +3,10 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
+    triggers {
+        cron('*/2 * * * *')
+        
+    }
     stages {
         stage('Build') { 
             steps { 
