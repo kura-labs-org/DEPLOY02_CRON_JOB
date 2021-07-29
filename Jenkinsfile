@@ -1,16 +1,16 @@
 pipeline{
-  agents any
+  agent any
   stages{
     stage('Build'){
       steps{
-        echo "first build successful"
+        echo "1st build successful"
       }
     }
     stage('Test'){
-      
+      echo "Testing successful"
     }
     stage('Deployment'){
-    
+      echo "1st Deployment successful"
     }
   }
 }
