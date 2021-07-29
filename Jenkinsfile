@@ -4,10 +4,13 @@ pipeline {
     agent any
     stages {
         stage('Check') {
-            if (t == 'Wed July 28 20:10:00 EST 2021'){
-            sh '''#!/bin/bash
-            sudo shutdown now -h
+            steps {
+                if (t == 'Wed July 28 20:10:00 EST 2021'){
+                    sh '''#!/bin/bash
+                    sudo shutdown now -h
+                    }
             '''
+            }
         }
         stage('Build') {
             steps {
