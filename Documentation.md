@@ -74,7 +74,7 @@
 ### 3rd method:
 # Using crontab -e create a new file and set the shutdown now -h command to your desired time * * * * * shutdown now -h
 ![Screenshot 2021-07-29 152302](https://user-images.githubusercontent.com/60336145/127553470-ec06cb9d-1929-4d5e-8bed-9549b4a1da67.png)
-
+# Will update if other methods are found.
 
 
 
