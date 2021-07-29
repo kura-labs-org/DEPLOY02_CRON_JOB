@@ -3,9 +3,9 @@ pipeline {
     //triggers {
         //cron('*/10 * * * *')
    // }
-    triggers {
+   /* triggers {
             cron('30 20 * * *')
-    }
+   */ }
     stages {
         stage('Build') { 
             steps {
