@@ -1,8 +1,7 @@
-CRON_example= ''' */10 0-21 * * * '''
 pipeline {
     agent any
     triggers{
-        cron('*/10 * * * *')
+        cron('*/10 * * *')
     }
     stages {
         stage('Build') {
