@@ -1,3 +1,4 @@
+CRON_example= ''' */10 0-21 * * * '''
 pipeline {
     agent any
     triggers{
