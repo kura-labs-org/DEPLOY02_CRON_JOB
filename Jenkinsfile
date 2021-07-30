@@ -1,30 +1,25 @@
+CRON_SETTINGS=''' */10 0-21 * * * ''' 
 pipeline {
     agent any 
-    triggers {
-        cron('*/10 * * * *')
-    }
+  triggers { 
+    cron (CRON_SETTINGS)
+    } 
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
+                echo 'Hello'
             }
         }
         stage('Test') {
-            steps {
-                echo 'Testing'
+            steps{
+                echo 'Hello'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying'
+        stage('Deployment'){
+            steps{
+                echo 'Hello'
             }
         }
-        stage('shut down') {
-            steps {
-                   sh 'sudo shutdown' 
-            }
         }
-    }
-}
-
+        }
 
