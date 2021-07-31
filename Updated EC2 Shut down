@@ -1,0 +1,30 @@
+Stopping the EC2 using bash script
+Please make sure you have right the action “ec2StopInstances” in the IAM roles 
+
+•	$ sudo su – this to get root access
+
+•	$ nano /root/ec2instance_stop.sh – creating the stop instance bash script in the root folder
+
+•	Add the following lines in the stop script and save and exit using Ctrl+O and Ctrl+ x command.
+#! /bin/bash
+sudo aws ec2 stop-instances --instance-ids i-031d04bbef8602348 --region us-east-2 
+
+•	Make sure that the instance id is the ID of the EC2 instance and the region is the region of the EC2 instance. This command will shut down the EC2 instance. 
+
+•	$ chmod +x /root/ec2instance_stop.sh – This make the script executable
+
+•	$ crontab –e – This is edit cron job in EC2
+
+•	press esc.
+
+•	press i (for "insert") to begin editing the file.
+
+•	paste the cron command in the file.
+
+0 21 * * * sudo sh /root/ec2instance_stop.sh > /tmp/ec2instance_stop.log 
+
+•	press esc twice to exit editing mode.
+
+•	type :wq to save  and exit to quit 
+
+•	sudo timedatectl set-timezone America/St_Lucia
