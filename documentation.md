@@ -1,3 +1,5 @@
+
+
 # Documentation
 
 # Setup
@@ -45,3 +47,7 @@ When I ran the pipeline, the console in Jenkins showed that python succesfully i
 To make it run on schedule, I added a triggers step in the jenkins file with the cron job `'H/10 * * * *`.
 
 Finally to make the ec2 instance shutdown, I used a cronjob with the set time and had it run the shutdown command at the given time.
+
+![Screen Shot 2021-08-07 at 11 23 51 AM](https://user-images.githubusercontent.com/42876250/128605217-d6cf7216-d150-443f-9c94-ded2d948ffa2.png)
+
+I didn't get to take pictures of the builds on Jenkins, but in my commit history you can see the green checkmarks next to the succesfull builds and the red x next to failed builds and nothing next to a commit when Jenkins wasn't connected.
