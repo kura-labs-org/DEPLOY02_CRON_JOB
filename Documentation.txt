@@ -1,0 +1,5 @@
+1. create a pipline job 
+2. assign it as a github project
+3. the build trigger is a github hook
+4. pipline script from SCM, jenkins will read the jenkinsfile from the pull request
+5. make a push request
