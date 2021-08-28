@@ -1,4 +1,4 @@
-CRON_MIN=''' * * * * * '''
+CRON_MIN=''' */10 * * * *'''
 pipeline{
   agent any
   triggers{
