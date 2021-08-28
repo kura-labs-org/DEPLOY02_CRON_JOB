@@ -1,5 +1,9 @@
+CRON_MIN=''' H/1 * * * * '''
 pipeline{
   agent any
+  triggers{
+        cron(CRON_MIN)
+    }
   stages{
     stage('Build'){
       steps{
