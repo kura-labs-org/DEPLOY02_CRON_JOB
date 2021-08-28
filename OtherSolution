@@ -1,9 +1,9 @@
-CRON_Exampl=''' */10 0-21 * * * ''' 
+CRON_SETTINGS=''' */10 0-21 * * * ''' 
 pipeline {
-    agent any
-    triggers{
-        cron(CRON_Exampl)
-    }
+    agent any 
+  triggers { 
+    cron (CRON_SETTINGS)
+    } 
     stages {
         stage('Build') {
             steps {
@@ -22,4 +22,3 @@ pipeline {
         }
         }
         }
-   
