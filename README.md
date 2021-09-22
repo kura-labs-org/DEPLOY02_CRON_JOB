@@ -84,7 +84,7 @@ git pull origin main
 ##This step was done in lieu of a Build Trigger since this Project item does not seem to have a Build Trigger Function Setting in the Pipeline, and in the branches configuration, there is no way to enable the Build Trigger. However, if a Build trigger cron job was needed. add to cron: */10 * * * * 
 
 
-<h2>Shutting down at end of class</h2?
+<h2>Shutting down at end of class</h2>
 #There are two ways of doing this. First is the cron job, and the second is the Instance Scheduler on AWS.
 #Cron
 -Check time and date of the Linux Machine using command:
