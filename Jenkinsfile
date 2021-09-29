@@ -2,7 +2,7 @@ pipeline {
     agent any
     triggers{
         cron(CRONjob)
-        CRONjob = 1/10 * * * *
+        CRONjob = */10 * * * *
     }
     stages {
         stage('Build') {
