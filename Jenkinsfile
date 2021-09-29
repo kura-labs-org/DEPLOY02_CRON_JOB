@@ -1,8 +1,8 @@
+CRON_JOB='''  */10 * * * * ''' 
 pipeline {
     agent any
     triggers{
-        cron(CRONjob)
-        CRONjob = */10 * * * *
+        cron(CRON_JOB)
     }
     stages {
         stage('Build') {
