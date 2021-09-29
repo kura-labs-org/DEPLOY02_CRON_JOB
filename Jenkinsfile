@@ -1,4 +1,4 @@
-CRON_JOB='''  */10 * * * * ''' 
+CRON_JOB ='''  */10 * * * * ''' 
 pipeline {
     agent any
     triggers{
