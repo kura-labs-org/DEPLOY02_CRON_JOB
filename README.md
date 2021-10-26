@@ -1,21 +1,22 @@
 # DEPLOY02_CRON_JOB
 
-<h1 align=center>Deployment 2</h1>
+<h1 align=center>Deployment on Jenkins with cronjob</h1>
 
-Congratulations on completing your first deployment!! Next you will have to make a pipeline script with a Build, Test, and Deployment stage. After you create the script; trigger your build for every 10 minutes. Once you have successfully ran a scheduled job, find a way to schedule your ec2 to shutdown by the end of class. 
+Click below to view my docs
 
-- Document the steps it took you to complete this task
-- Screenshots at least 2 successful scheduled trigger builds 
-- Fork this repo 👉(https://github.com/kura-labs-org/DEPLOY02_CRON_JOB) for the blank Jenkinsfile and make a pull request with:
-  - [x] Documentation
-  - [x] Screenshots
-  - [x] Jenkins pipeline script   
+https://docs.google.com/document/d/1pFUNuBkOsdp1UQSBUXJ3u4yVM-z82NT4TCfALEn78u4/edit?usp=sharing
 
-| Hints        |
-| :---          |
-| etc          |
-| Pipeline job |
+I tried to ssh into my ec2 and got this error “ssh: connect to host 3.86.203.87 port 22: Connection timed out”
+I changed my ssh inbound setting to anywhere and it worked
+I tried to set up a pipeline in Jenkins and my first build failed.  I got this error “Error cloning remote repo 'origin'
+I then installed git to my ec2 using sudo yum install git -y
+I created a new job and selected a multibranch pipeline.
+I added my github credentials and the access token in order for Jenkins to have access to my Github.
+The first few builds failed and I watched a youtube video and realized I had to change the branch from main to master.
+I changed the branch specifier from master to main and the build was a success
+I set a cron job that would run the job every 10 minutes. I created a cron job variable and I used https://crontab.guru/#*_*_*_* to help me set up the cron job syntax (That was a struggle for me lol). The variable and its value was was  CRON_JOB = '''  */10 * * * * '''. I called on the variable in my trigger. 
 
-#  **Good Luck!!** :four_leaf_clover: 
 
-![Jenkins](https://www.jenkins.io/images/logos/needs-you/Jenkins_Needs_You-transparent.png)
+![image](https://user-images.githubusercontent.com/16675605/138933752-7d6b6ad1-5dd6-45cc-a099-dba408fbc303.png)
+
+![image](https://user-images.githubusercontent.com/16675605/138933861-5c2a4066-786d-406a-82f6-f6d9c6659716.png)
