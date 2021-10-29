@@ -18,6 +18,7 @@ Congratulations on completing your first deployment!! Next you will have to make
 <h1>Documentation </h1>
 
 <h2>Task:</h2>
+
 Deploy Jenkins on a Linux system to and create a pipeline to include 3 stages (Build, Deploy and Test)
 Following this, the parameters of this job must include a build every 10 minutes.
 Last, a shutdown at the end of class (Tues-Thurs 9PM, Sat 5PM)
@@ -37,6 +38,7 @@ Instructions broken down as followed:
 -Locate your Public IP on the EC2 Dashboard, copy and use on your client
 
 <h2>SSHing and Linux setup</h2>
+
 -Once logged in run the following commands:
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -50,6 +52,7 @@ sudo systemctl start jenkins
 #The next two commands will reload the system daemon and start jenkins
 
 <h2>SSH KEYS</h2>
+
 #In order to use git ssh, you have to run the following commands
 Commands:
 ssh-keygen -C "youremailaddress"
@@ -60,6 +63,7 @@ cat ida_rsa.pub
 
 
 <h2>Git</h2>
+
 -Fork the git using the website
 -Use the following commands:
 mkdir Deployment2
@@ -70,7 +74,8 @@ git add remote origin "git@github.com/yoursuser/DEPLOY02_CRON_JOB
 git branch -M main
 git pull origin main
 
-<h2>Jenkins</h2>+
+<h2>Jenkins</h2>
+
 #Jenkins has started with a webgui on publicIP:8080
 -Go to publicIP:8080 on your browser.
 -Follow the directions to find the secret password using the listed directory via cat command
@@ -85,6 +90,7 @@ git pull origin main
 
 
 <h2>Shutting down at end of class</h2>
+
 #There are two ways of doing this. First is the cron job, and the second is the Instance Scheduler on AWS.
 #Cron
 -Check time and date of the Linux Machine using command:
@@ -104,5 +110,4 @@ sudo crontab -e
 -Check that the cron has been successfully placed in.
 sudo crontab -l
 ##Usually with crontab, the commands are checked and verified, so it's harder to make a mistake. It also updates the file and cron service, so no reload/restart of service is needed.
-##Read here for AWS Instance scheduler
-https://docs.aws.amazon.com/solutions/latest/instance-scheduler/deployment.html#step1
+##Read here for AWS Instance [scheduler](https://docs.aws.amazon.com/solutions/latest/instance-scheduler/deployment.html#step1)
