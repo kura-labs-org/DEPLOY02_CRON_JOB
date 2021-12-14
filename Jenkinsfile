@@ -1,13 +1,25 @@
 
 
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
+  agent any
+  triggers {
+      cron('H/10 * * * *')
+  }
+  stages {
+    stage('Build') {
+      steps {
+          echo "Build Commencing..."
+      }
     }
+    stage('Test'){
+      steps{
+          echo "Test"
+      }
+    }
+    stage('Deploy'){
+      steps{
+          echo "Deploy"
+      }
+    }
+  }
 }
-
